@@ -1,6 +1,3 @@
-# To build the entire stack run 'make run'
-# To build just the errbot chatbot run 'make errbot'
-
 version: '3.9'
 
 services:

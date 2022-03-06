@@ -4,7 +4,7 @@ FROM nginx:mainline-alpine
 WORKDIR /app
 
 # add certs
-COPY ssl /data/certs
+COPY --chown=nginx:nginx ssl /data/certs
 
 # Add bash for boot cmd
 RUN apk add bash
@@ -21,15 +21,6 @@ RUN chown -R nginx:nginx /app && chmod -R 755 /app && \
         chmod -R 755 /var/log/nginx; \
         chown -R nginx:nginx /etc/nginx/conf.d
 RUN touch /var/run/nginx.pid && chown -R nginx:nginx /var/run/nginx.pid
-
-# # Uncomment to keep the nginx logs inside the container - Leave commented for logging to stdout and stderr
-# RUN mkdir -p /var/log/nginx
-# RUN unlink /var/log/nginx/access.log \
-#     && unlink /var/log/nginx/error.log \
-#     && touch /var/log/nginx/access.log \
-#     && touch /var/log/nginx/error.log \
-#     && chown nginx /var/log/nginx/*log \
-#     && chmod 644 /var/log/nginx/*log
 
 ADD config/default.conf /tmp/default.conf
 
