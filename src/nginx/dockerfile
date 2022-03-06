@@ -32,9 +32,9 @@ ADD config/default.conf /tmp/default.conf
 
 USER nginx
 
-EXPOSE 8080
+EXPOSE 80
 
 HEALTHCHECK --start-period=5s --timeout=15s --interval=30s \
-        CMD curl --fail http://localhost:8080/health-check || exit 1   
+        CMD curl --fail http://localhost:80/health-check || exit 1   
 
 CMD ["/app/start.sh"]
