@@ -13,18 +13,21 @@ services:
       - 3001:3001
     build:
       context: ./src/status_page
-      dockerfile: ./dockerfile
+      dockerfile: ./Dockerfile
 
   nginx_proxy:
     container_name: nginx_proxy
     build:
       context: ./src/nginx
-      dockerfile: ./dockerfile
+      dockerfile: ./Dockerfile
     ports:
-      - "8080:8080"
+      - 80:80
+      - 443:443
     environment:
-      - SERVER_NAME=localhost
+      - SERVER_NAME=borscht.birki.io
       - BACKEND_ADDR=status_page
       - BACKEND_PORT=3001
     depends_on:
       - status_page
+    volumes:
+      - ./src/nginx/ssl:/data/certs:ro
