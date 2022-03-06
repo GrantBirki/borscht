@@ -4,3 +4,6 @@ sudo cp /etc/letsencrypt/live/borscht.birki.io/privkey.pem ~/borscht/src/nginx/s
 sudo cp /etc/letsencrypt/live/borscht.birki.io/fullchain.pem ~/borscht/src/nginx/ssl/
 
 sudo chown -R borscht-user:borscht-user ~/borscht/src/nginx/ssl/
+
+# Run a fresh deploy
+~/borscht/script/deploy
