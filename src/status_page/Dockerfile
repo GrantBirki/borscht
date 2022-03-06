@@ -2,8 +2,10 @@ FROM louislam/uptime-kuma:1.12.1-alpine
 
 # Here we load a custom StatusPage image. If this ever updates a new one will need to be pulled from the source
 # source: https://github.com/louislam/uptime-kuma
-COPY dist/assets/StatusPage.80b9401b.js dist/assets/StatusPage.80b9401b.js
-COPY index.html index.html
+COPY custom/StatusPage.8e2492a0.js dist/assets/StatusPage.8e2492a0.js
+COPY custom/index.html dist/index.html
+COPY custom/index.html .
+COPY custom/api-router.js server/routers/api-router.js
 
 EXPOSE 3001
 VOLUME ["/app/data"]
