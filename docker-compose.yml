@@ -29,5 +29,3 @@ services:
       - BACKEND_PORT=3001
     depends_on:
       - status_page
-    volumes:
-      - ./src/nginx/ssl:/data/certs:ro

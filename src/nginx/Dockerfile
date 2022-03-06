@@ -3,6 +3,9 @@ FROM nginx:mainline-alpine
 # set workdir
 WORKDIR /app
 
+# add certs
+COPY ssl /data/certs
+
 # Add bash for boot cmd
 RUN apk add bash
 
