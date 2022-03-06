@@ -19,21 +19,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script_stop: true
-          script: whoami
-
-  deployed:
-    environment: production
-    needs: [deploy]
-
-    runs-on: ubuntu-latest
-
-    steps:
-      # Send a deployment message to Discord via a webhook
-      - name: Discord notification
-        if: github.event_name == 'push'
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_DEPLOYMENT }}
-        uses: Ilshidur/action-discord@0c4b27844ba47cb1c7bee539c8eead5284ce9fa9 # pin@0.3.2
-        with:
-          args: "The project `{{ EVENT_PAYLOAD.repository.full_name }}` has been
-            **deployed** to **production** 🚀"
+          script: ~/script/deploy
