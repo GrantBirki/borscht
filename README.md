@@ -47,12 +47,11 @@ To build and test locally, do the following:
     docker-compose -f docker-compose-local.yml up --build
     ```
 
-2. Open the app in your browser -> [localhost:80](http://localhost:80)
-3. Go to the [setting/backup](http://localhost/settings/backup) page and upload the [monitor config](config/config.json) in this repo
+2. Go to the [setting/backup](http://localhost/settings/backup) page and upload the [monitor config](config/config.json) in this repo
 
     ![upload](assets/upload.png)
 
-4. Watch all your monitors come online
+3. Watch all your monitors come online
 
     ![monitors](assets/monitors.png)
 
