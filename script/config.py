@@ -2,7 +2,6 @@ import json
 from jinja2 import Template
 import sys
 
-HTTP_MONITOR_INTERVAL = 120
 REPO_DIR = sys.argv[1]
 
 def http_template():
@@ -30,7 +29,7 @@ def generate_http_monitors(domains):
     template = Template(http_template())
     
     for domain in domains:
-        monitor = template.render(domain=domain, interval=HTTP_MONITOR_INTERVAL)
+        monitor = template.render(domain=domain)
         monitors.append(json.loads(monitor))
     return monitors
 
