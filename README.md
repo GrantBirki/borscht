@@ -37,6 +37,8 @@ Here is a list of various sources, projects, and comments talking about the on-g
 
 If you have a new domain you wish to add to the monitor, please file an issue in this repo by clicking [here](https://github.com/GrantBirki/borscht/issues/new?labels=domain+request&template=domain-request.md&title=Domain+Request)
 
+The list of all domains currently monitored can be found [here](config/domains.txt)
+
 ## Building Locally 🧱
 
 To build and test locally, do the following:
