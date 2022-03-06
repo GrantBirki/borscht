@@ -1,7 +1,7 @@
 ---
 name: Domain Request
 about: Request a domain to be added
-title: ''
+title: 'Domain Request'
 labels: domain request
 assignees: ''
 
