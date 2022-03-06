@@ -1,1 +1,8 @@
 #!/bin/bash
+
+cd ~/borscht
+
+git fetch --all
+git reset --hard origin/main
+
+sudo make run
