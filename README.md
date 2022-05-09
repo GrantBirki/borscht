@@ -4,7 +4,7 @@ Borscht is a simple uptime and status monitor of Russian sites and services
 
 You can view the public status page [here](https://borscht.birki.io/status) 🔗
 
-> Note: The site [borsct.birki.io](https://borsct.birki.io) has been taken offline because it was costing me money to run. However, you can always clone or fork this repo and host it on your own or test it our locally!
+> Note: The site [borscht.birki.io](https://borscht.birki.io) has been taken offline because it was costing me money to run. However, you can always clone or fork this repo and host it on your own or test it our locally!
 
 ## About 💡
 
