@@ -4,11 +4,19 @@ Borscht is a simple uptime and status monitor of Russian sites and services
 
 You can view the public status page [here](https://borscht.birki.io/status) 🔗
 
+> Note: The site [borsct.birki.io](https://borsct.birki.io) has been taken offline because it was costing me money to run. However, you can always clone or fork this repo and host it on your own or test it our locally!
+
 ## About 💡
 
 This project was inspired due to the conflict in Ukraine which spawned a massive community run DDoS attack against Russian owned internet domains.
 
 I wanted to see just how many Russian sites are down due to DDoS attacks and how they trending availability wise over time.
+
+## Example 📸
+
+Below is an example screenshot of the app:
+
+![example](assets/example.png)
 
 ### DDoS Attacks 💥
 
